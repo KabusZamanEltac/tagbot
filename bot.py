@@ -32,20 +32,22 @@ async def cancel(event):
 async def start(event):
   await event.reply("**Dizertagers**, Qrupda və ya kanalda demək olar ki, hər bir üzvü qeyd edə bilərəm 🌹\nDaha ətraflı məlumat üçün **/help**'yazın.",
                     buttons=(
-                      [Button.url('➕ Gurupa Sal', 'https://t.me/BStaggerbot?startgroup=a'),
-                      Button.url('⚕️ Grups', 'https://t.me/Cat_House_Gurups'),
-                      Button.url('👨🏻‍💻 Sahibim', 'https://t.me/K_E_R_E_M_D_I')]
+                      [Button.url('➕ Gurupa Sal', 'https://t.me/Werab_tag_bot?startgroup=a'),
+                      [Button.url('⚕️ Resmi Qrup', 'https://t.me/WerabliAnlar'),
+                      [Button.url('🛠️ User Bots',  'https://t.me/WerabSupport'),
+                      [Button.url('👨🏻‍💻 Sahibim', 'https://t.me/ismiyev95')]
                     ),
                     link_preview=False
                    )
 @client.on(events.NewMessage(pattern="^/help$"))
 async def help(event):
-  helptext = "**ΒЅͲαɠεɾΒσʈ'un Köməl Menyusu**\n\nƏmirlər: /tag \nBu əmri başqalarına demək istədiyiniz mətnlə birlikdə istifadə edə bilərsiniz. \nEmoji tag: /etag'Bu əmri cavab olaraq istifadə edə bilərsiniz. istənilən mesaj Bot istifadəçiləri cavab mesajına işarələyəcək"
+  helptext = "**Werab_tag_bot'un Kömək Menyusu**\n\nƏmirlər: /tag \nBu əmri başqalarına demək istədiyiniz mətnlə birlikdə istifadə edə bilərsiniz. \nEmoji tag: /etag'Bu əmri cavab olaraq istifadə edə bilərsiniz. istənilən mesaj Bot istifadəçiləri cavab mesajına işarələyəcək"
   await event.reply(helptext,
                     buttons=(
-                      [Button.url('➕ Gurupa sal', 'https://t.me/BStaggerbot?startgroup=a'),
-                       Button.url('⚕️ Grups', 'https://t.me/Cat_House_Gurups'),
-                      Button.url('👨🏻‍💻 Sahibim', 'https://t.me/K_E_R_E_M_D_I')]
+                      [Button.url('➕ Gurupa sal', 'https://t.me/Werab_tag_bot?startgroup=a'),
+                      [Button.url('⚕️ Grups', 'https://t.me/WerabliAnlar'),
+                      [Button.url('🛠️ User Bots',  'https://t.me/WerabSupport'),
+                      [Button.url('👨🏻‍💻 Sahibim', 'https://t.me/ismiyev95')]
                     ),
                     link_preview=False
                    )
@@ -85,7 +87,7 @@ async def mentionall(event):
       usrnum += 1
       usrtxt += f"[{usr.first_name}](tg://user?id={usr.id}) "
       if event.chat_id not in anlik_calisan:
-        await event.respond("Durdum🌹")
+        await event.respond("Durdum🍷")
         return
       if usrnum == 5:
         await client.send_message(event.chat_id, f"{usrtxt}\n\n{msg}")
@@ -103,7 +105,7 @@ async def mentionall(event):
       usrnum += 1
       usrtxt += f"[{usr.first_name}](tg://user?id={usr.id}) "
       if event.chat_id not in anlik_calisan:
-        await event.respond("Durdum🌹")
+        await event.respond("Durdum🍷")
         return
       if usrnum == 5:
         await client.send_message(event.chat_id, usrtxt, reply_to=msg)
@@ -145,7 +147,7 @@ async def etag(event):
       usrnum += 1
       usrtxt += f"[{random.choice(emj)}](tg://user?id={usr.id}) "
       if event.chat_id not in anlik_calisan:
-        await event.respond("Durdum🌹")
+        await event.respond("Durdum🍷")
         return
       if usrnum == 5:
         await client.send_message(event.chat_id, f"{usrtxt}\n\n{msg}")
@@ -163,7 +165,7 @@ async def etag(event):
       usrnum += 1
       usrtxt += f"[{random.choice(emj)}](tg://user?id={usr.id}) "
       if event.chat_id not in anlik_calisan:
-        await event.respond("Durdum🌹")
+        await event.respond("Durdum🍷")
         return
       if usrnum == 5:
         await client.send_message(event.chat_id, usrtxt, reply_to=msg)
